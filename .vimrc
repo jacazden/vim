@@ -16,6 +16,12 @@ let mapleader = ","
 let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
+"clipboard interface arch linux
+set clipboard=unnamedplus
+"noremap <leader>Y "*y
+"noremap <leader>P "*y
+"noremap <leader>y "+y
+"noremap <leader>p "+p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,10 +90,11 @@ call pathogen#infect()
 syntax enable
 set t_Co=256
 
-colorscheme solarized
+colorscheme molokai
 set background=dark
-let g:solarized_termcolors=256
-highlight Normal ctermfg=grey ctermbg=black
+"let g:solarized_termcolors=256
+highlight Normal ctermbg =none
+highlight NonText ctermbg=none
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -126,9 +133,13 @@ set expandtab
 set smarttab
 
 " 1 tab == 8 spaces
-set shiftwidth=8
-set tabstop=8
-set softtabstop=8
+"set shiftwidth=8
+"set tabstop=8
+"set softtabstop=8
+" 1 tab == 8 spaces
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 
 " Linebreak on 500 characters
 set lbr
